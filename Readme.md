@@ -93,5 +93,4 @@ Username: ammu@gmail.com
 Password: ammu
 
 License:
-
 This project is for educational purposes only.
