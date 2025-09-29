@@ -1,0 +1,119 @@
+/* Background Slideshow */
+.bg-slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    animation: slideShow 20s infinite;
+    /* 20s la cycle repeat */
+}
+
+/* Posters change animation */
+@keyframes slideShow {
+    0% {
+        background-image: url("bg5.jpg");
+    }
+
+    18% {
+        background-image: url("bg6.jpg");
+    }
+
+    33% {
+        background-image: url("bg11.jpg");
+    }
+
+    66% {
+        background-image: url("bg12.jpg");
+    }
+
+    100% {
+        background-image: url("bg58.jpg");
+    }
+}
+
+/* Dark overlay for text readability */
+.bg-slideshow::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(151, 140, 140, 0.6);
+    /* semi-transparent dark layer */
+}
+
+.container {
+    margin-top: 200px;
+    margin-left: 400px;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* center the form */
+    gap: 15px;
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Horizontal form-group for username */
+.form-group.horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.form-group.horizontal label {
+    width: 30%;
+    /* label takes 30% of width */
+    text-align: right;
+    margin-right: 10px;
+}
+
+.form-group.horizontal input {
+    width: 65%;
+    /* input takes remaining width */
+    border: 1px solid #ccc;
+    /* light border */
+    border-radius: 5px;
+    padding: 6px 8px;
+}
+
+/* Vertical stacked inputs */
+.form-group:not(.horizontal) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    /* light border */
+}
+
+/* Register button */
+.btn-register {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    /* border around button */
+    background-color: #ff4c4c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
