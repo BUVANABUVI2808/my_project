@@ -92,8 +92,10 @@ Password: Admin@123
 Default User login:
 
 Username: ammu@gmail.com
+
 Password: ammu
 
 License:
 This project is for educational purposes only.
+
 
